@@ -43,16 +43,20 @@ NativeWidth=2560
 NativeHeight=1440
 DsrMultiplier=2.25
 RefreshRate=165
+```
 
-🛡️ Safety & Reliability Architecture
-AutoDsrToggle includes safeguards to prevent misbehavior, corruption, or race conditions:
+## 🛡️ Safety, Reliability & Self-Healing Architecture
+### AutoDsrToggle includes robust safeguards to prevent race conditions, hardware mismatches, and file corruptions:
 
-🔒 Single-Instance Lock: A system-wide Mutex prevents overlapping executions and race conditions if the tool is triggered rapidly via macros or scripts.
+### 🔒 Single-Instance Lock:
+A system-wide Mutex prevents overlapping executions and race conditions if the tool is triggered rapidly via hotkeys, macros, or scripts.
 
-👁️ WMI Hardware Safeguards: Unique hardware instance IDs track your specific monitors even if display cables, ports, or power states are swapped.
+### 👁️ WMI Hardware Safeguards:
+Unique hardware instance IDs track your specific monitors even if display cables, ports, or power states are swapped.
 
-🔄 Self-Healing Engine: If a display order shift, hardware change, invalid resolution, or structural config error is detected, the utility automatically purges the corrupted state, triggers a warning/reset prompt, and regenerates fresh defaults.
+### 🔄 Self-Healing Engine:
+If a display order shift, hardware change, invalid resolution, or structural config error (such as missing or out-of-range display sections) is detected, the utility automatically purges the invalid state, displays a reset prompt, and regenerates fresh defaults.
 
-📜 License
+## 📜 License
 This program is free software released under the GNU General Public License v3.0 (GPL v3).
-You can find the full license text in the gpl-3.0.txt file included in this repository or online at https://www.gnu.org/licenses/.
+You can find the full license text in the gpl-3.0.txt file included in this repository, embedded within the executable, or online at https://www.gnu.org/licenses/.
