@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>14.0</LangVersion>
+		<PublishAot>false</PublishAot>
+		<PublishSingleFile>true</PublishSingleFile>
+		<SelfContained>true</SelfContained>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="NvAPIWrapper.Net" Version="0.8.1.101" />
+		<EmbeddedResource Include="gpl-3.0.txt" />
+		<None Update="gpl-3.0.txt">
+				<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			</None>
+	</ItemGroup>
+
+</Project>
