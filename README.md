@@ -12,7 +12,7 @@
 
 ---
 
-## 🚀 Overview
+## 📋 Overview
 
 **AutoDsrToggle** acts as a reliable toggle switch between your native display resolution and your configured **NVIDIA DSR** (Dynamic Super Resolution) target. Designed as a lightweight, headless background executable, it allows power users and enthusiasts to instantly switch resolutions via hotkeys, desktop shortcuts, or custom scripts without interacting with the NVIDIA App.
 
@@ -45,7 +45,7 @@ DsrMultiplier=2.25
 RefreshRate=165
 ```
 
-## 🛡️ Safety, Reliability & Self-Healing Architecture
+## 🛡️ Safety, Reliability & Self-Healing Configuration Architecture
 ### AutoDsrToggle includes robust safeguards to prevent race conditions, hardware mismatches, and file corruptions:
 
 ### 🔒 Single-Instance Lock:
