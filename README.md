@@ -12,13 +12,13 @@
 
 ---
 
-## 📋 Overview
+## Overview
 
 **AutoDsrToggle** acts as a reliable toggle switch between your native display resolution and your configured **NVIDIA DSR** (Dynamic Super Resolution) target. Designed as a lightweight, headless background executable, it allows power users and enthusiasts to instantly switch resolutions via hotkeys, desktop shortcuts, or custom scripts without interacting with the NVIDIA App.
 
 ---
 
-## ⚙️ How It Works (Toggle Behavior)
+## How It Works (Toggle Behavior)
 
 - If your display is currently at **NATIVE** resolution $\rightarrow$ switches to **DSR**.
 - If your display is currently at **DSR** resolution $\rightarrow$ switches back to **NATIVE**.
@@ -26,7 +26,7 @@
 
 ---
 
-## 🛠️ Getting Started & Configuration
+## Getting Started & Configuration
 
 1. **First Run:** Launch `AutoDsrToggle.exe` once. It will automatically initialize, map your active displays via NVAPI, prompt a setup message box, and generate the configuration files in `%LOCALAPPDATA%\AutoDsrToggle`.
 2. **Edit Config:** Open `adt_config.ini` located in that folder.
@@ -45,18 +45,18 @@ DsrMultiplier=2.25
 RefreshRate=165
 ```
 
-## 🛡️ Safety, Reliability & Self-Healing Configuration Architecture
+## Safety, Reliability & Self-Healing Configuration Architecture
 ### AutoDsrToggle includes robust safeguards to prevent race conditions, hardware mismatches, and file corruptions:
 
-### 🔒 Single-Instance Lock:
+### Single-Instance Lock:
 A system-wide Mutex prevents overlapping executions and race conditions if the tool is triggered rapidly via hotkeys, macros, or scripts.
 
-### 👁️ WMI Hardware Safeguards:
+### WMI Hardware Safeguards:
 Unique hardware instance IDs track your specific monitors even if display cables, ports, or power states are swapped.
 
-### 🔄 Self-Healing Engine:
+### Self-Healing Engine:
 If a display order shift, hardware change, invalid resolution, or structural config error (such as missing or out-of-range display sections) is detected, the utility automatically purges the invalid state, displays a reset prompt, and regenerates fresh defaults.
 
-## 📜 License
+## License
 This program is free software released under the GNU General Public License v3.0 (GPL v3).
 You can find the full license text in the gpl-3.0.txt file included in this repository, embedded within the executable, or online at https://www.gnu.org/licenses/.
